@@ -3,6 +3,5 @@ webdriver_manager.chrome
 streamlit
 re
 requests
-bs4 
 matplotlib
 collections
