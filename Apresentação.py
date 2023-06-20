@@ -1,16 +1,18 @@
 import streamlit as st
-from re import findall
-import requests
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup
 import matplotlib.pyplot as plt
 from collections import Counter
 
 def fazer_requisicao(url):
     try:
-        response = requests.get(url)
-        response.raise_for_status()
-        return response.content
-    except requests.exceptions.RequestException as e:
+        driver = webdriver.Chrome(ChromeDriverManager().install())
+        driver.get(url)
+        html = driver.page_source
+        driver.quit()
+        return html
+    except Exception as e:
         st.error(f"Ocorreu um erro durante a requisição: {e}")
         return None
 
