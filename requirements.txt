@@ -1,0 +1,6 @@
+streamlit
+re
+requests
+bs4 
+matplotlib
+collections
