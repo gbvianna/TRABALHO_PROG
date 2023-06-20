@@ -1,7 +1,6 @@
 import streamlit as st
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
-from bs4 import BeautifulSoup
 import matplotlib.pyplot as plt
 from collections import Counter
 
