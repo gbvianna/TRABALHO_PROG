@@ -1,6 +1,5 @@
 selenium
 webdriver_manager.chrome
-streamlit
 re
 requests
 matplotlib
